@@ -1,8 +1,11 @@
 # Proyecto de Diseño de Sistemas - NestJS & Prisma
 
-Este repositorio contiene el desarrollo del proyecto de Diseño de Sistemas, organizado por etapas según las guías didácticas entregadas.
+<img width="1608" height="402" alt="Cover repo DS" src="https://github.com/user-attachments/assets/20f9b25a-61ab-4f19-96f0-ac463da2932c" />
 
----
+
+Este repositorio esta realizado para la entrega del proyecto de la clase de DISEÑO DE SISTEMAAS, proyecto trabajado con Typescript, Primas, Seed, y mucho mas
+
+-----------------------
 
 ## 📋 Prerrequisitos
 
@@ -12,7 +15,7 @@ Antes de comenzar, asegúrate de tener instalado:
 - **NPM**: (Empaquetador de dependencias)
 - **Docker**: (Opcional, solo si deseas usar PostgreSQL)
 
----
+-----------------------
 
 ## 🟢 Gestión de Versiones Node.js
 
