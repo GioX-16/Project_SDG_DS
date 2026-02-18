@@ -29,10 +29,11 @@ A continuación se muestra el entorno de desarrollo en acción, destacando el ed
 <div align="center">
   
   ### 💻 Editor de Código
-  <img src="./docs/assets/editor_preview.png" alt="Vista del Editor de Código" width="90%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-bottom: 20px;">
+  <img width="1920" height="1193" alt="Cappppppp" src="https://github.com/user-attachments/assets/579c0464-3320-4129-953c-809919f50fc2" />
+
   
   ### 🖥️ Terminal (Servidor Activo)
-  <img src="./docs/assets/terminal_preview.png" alt="Vista de la Terminal" width="90%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
+  <img width="1581" height="598" alt="cappppp" src="https://github.com/user-attachments/assets/57722526-bee9-43ab-8199-10c390a20a16" />
 
 </div>
 
