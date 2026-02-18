@@ -1,61 +1,49 @@
-# 🚀 Getting started with Strapi
+# � Content Management Service
+### Specialized Headless CMS Module
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This directory contains the **Content Management System (CMS)** logic for the Project SDG DS platform. It acts as the centralized source of truth for dynamic content, media assets, and configurable data structures, exposing a robust API for consumption by other services.
 
-### `develop`
+> [!CAUTION]
+> ### ⚡ Version Requirement
+> This specific module utilizes `better-sqlite3` optimizations compatible with **Node.js v22.x**.
+>
+> Before running any commands in this directory, verify your active version:
+> ```bash
+> node -v  # Should represent v22.x
+> ```
+> *Recommended: Use `fnm use 22` to switch context.*
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+<br>
 
-```
-npm run develop
-# or
-yarn develop
-```
+## 🛠️ Operational Commands
 
-### `start`
+Manage the lifecycle of the CMS application using the following scripts.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+| Command | Action | Usage Scenario |
+| :--- | :--- | :--- |
+| **`npm run develop`** | Starts the server in **watch mode** | Active Development & Editing Content Types |
+| **`npm run start`** | Starts the formatted server | Production / Deployment Preview |
+| **`npm run build`** | Compiles the Admin Panel | Preparing for Deployment |
+| **`npm run strapi`** | Access CLI Directives | Advanced Database Management & Scaffolding |
 
-```
-npm run start
-# or
-yarn start
-```
+<br>
 
-### `build`
+## 📂 Architecture Overview
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+A quick look at the critical directories within this module:
 
-```
-npm run build
-# or
-yarn build
-```
+- **`/src/api`**: core business logic (Controllers, Services, Routes).
+- **`/src/admin`**: customizations for the Admin Panel interface.
+- **`/config`**: environment-specific configurations (Database, Server, API).
+- **`/public/uploads`**: local storage for media assets (git-ignored in production).
 
-## ⚙️ Deployment
+<br>
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+## 🔗 Reference & Documentation
 
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+*   **Core Documentation**: [Strapi Developer Docs](https://docs.strapi.io)
+*   **API Reference**: Auto-generated Swagger docs available at `/documentation` when running.
+*   **Design System Integration**: See main project [`README.md`](../README.md) for integration details.
 
 ---
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+<sub>Part of the **Project SDG DS** Ecology • Built with Strapi v5</sub>
