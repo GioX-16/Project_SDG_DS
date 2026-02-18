@@ -1,137 +1,150 @@
-# Proyecto de Diseño de Sistemas - NestJS & Prisma
+<div align="center">
+  <br />
+  <img src="https://github.com/user-attachments/assets/20f9b25a-61ab-4f19-96f0-ac463da2932c" alt="Project Banner" width="100%">
+  <br />
 
-<img width="1608" height="402" alt="Cover repo DS" src="https://github.com/user-attachments/assets/20f9b25a-61ab-4f19-96f0-ac463da2932c" />
+  <h1>Proyecto de Diseño de Sistemas - NestJS & Prisma</h1>
 
+  <p>
+    <b>Arquitectura Robusta • Multi-Database • CMS Headless de Alto Rendimiento</b>
+  </p>
 
-Este repositorio esta realizado para la entrega del proyecto de la clase de DISEÑO DE SISTEMAAS, proyecto trabajado con Typescript, Primas, Seed, y mucho mas
+  [![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
+  [![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://swagger.io/)
 
------------------------
+  <br />
+</div>
 
-## 📋 Prerrequisitos
+> [!NOTE]
+> Este repositorio constituye la entrega final para la clase de **DISEÑO DE SISTEMAS**. Desarrollado con tecnologías de punta: **Typescript, NestJS, Prisma, Seeds** y una arquitectura escalable.
 
-Antes de comenzar, asegúrate de tener instalado:
+---
 
-- **Node.js**: (Ver [Gestión de Versiones](#-gestión-de-versiones-nodejs))
-- **NPM**: (Empaquetador de dependencias)
-- **Docker**: (Opcional, solo si deseas usar PostgreSQL)
+## 📸 Vista Previa del Entorno
 
------------------------
+A continuación se muestra el entorno de desarrollo en acción, destacando el editor de código y la terminal con el servidor en ejecución.
 
-## 🟢 Gestión de Versiones Node.js
+<div align="center">
+  
+  ### 💻 Editor de Código
+  <img src="./docs/assets/editor_preview.png" alt="Vista del Editor de Código" width="90%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-bottom: 20px;">
+  
+  ### 🖥️ Terminal (Servidor Activo)
+  <img src="./docs/assets/terminal_preview.png" alt="Vista de la Terminal" width="90%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
 
-Este proyecto requiere diferentes versiones de Node.js según el componente que estés trabajando. Recomendamos usar [**fnm** (Fast Node Manager)](https://github.com/Schniz/fnm) para cambiar fácilmente entre ellas.
+</div>
 
-### Versiones Requeridas
+---
 
-| Componente | Carpeta | Versión de Node.js | Razón |
+## 📋 Tabla de Contenidos
+
+- [Prerrequisitos y Gestión de Versiones](#-prerrequisitos-y-gestión-de-versiones)
+- [Stack Tecnológico](#-stack-tecnológico)
+- [Guías de Implementación](#-guías-de-implementación)
+- [Base de Datos (Multi-DB)](#-base-de-datos-multi-db)
+- [Instalación y Uso](#-instalación-y-uso)
+
+---
+
+## 🟢 Prerrequisitos y Gestión de Versiones
+
+Para garantizar la compatibilidad y estabilidad, este proyecto requiere versiones específicas de Node.js.
+
+### Herramientas Necesarias
+- **Node.js**: Gestión mediante `fnm` (Fast Node Manager) recomendada.
+- **NPM**: Gestor de paquetes.
+- **Docker**: (Opcional) Requerido solo para despliegues con PostgreSQL.
+
+| Componente | Directorio | Versión Node.js | Motivo |
 | :--- | :--- | :--- | :--- |
-| **Backend (NestJS)** | Raíz (`/`) | **v25.x** | Compatibilidad con `better-sqlite3` native modules. |
-| **CMS (Strapi)** | `cms/` | **v22.x** (LTS) | Compatibilidad oficial de Strapi v5. |
+| **Backend (NestJS)** | Raíz (`/`) | **v25.x** | Soporte para `better-sqlite3` nativo |
+| **CMS (Strapi)** | `cms/` | **v22.x** (LTS) | Compatibilidad oficial Strapi v5 |
 
-### Cómo cambiar de versión con `fnm`
-
-Si no tienes instalada la versión necesaria:
-```bash
-fnm install 25
-fnm install 22
-```
-
-Para activar la versión antes de correr los comandos de cada proyecto:
-
-**Para el Backend (Root):**
-```bash
-fnm use 25
-npm run start:dev
-```
-
-**Para el CMS (Strapi):**
-```bash
-cd cms
-fnm use 22
-npm run develop
-```
+> **Tip:** Usa `fnm install 25` y `fnm install 22` para tener ambas versiones listas.
 
 ---
 
-## 🛠️ Tecnologías y Dependencias
+## 🛠️ Stack Tecnológico
 
-El proyecto utiliza un stack moderno y profesional para garantizar escalabilidad y tipado fuerte:
+La arquitectura se basa en principios SOLID y herramientas modernas para máxima eficiencia:
 
-- **Core**: [NestJS (v11)](https://nestjs.com/) para una arquitectura modular sólida.
-- **ORM**: [Prisma (v7)](https://www.prisma.io/) para la gestión de base de datos.
-- **Documentación**: [Swagger](https://swagger.io/) para una API auto-documentada.
-- **Seguridad**: [Passport.js](http://www.passportjs.org/) & [JWT](https://jwt.io/) para autenticación robusta.
-- **Validación**: `class-validator` & `class-transformer` para tipado y validación de DTOs en tiempo de ejecución.
+- **Core Framework**: [NestJS (v11)](https://nestjs.com/) - Modularidad y Arquitectura Hexagonal.
+- **ORM**: [Prisma (v7)](https://www.prisma.io/) - Type-safe database client.
+- **API Docs**: [Swagger](https://swagger.io/) - Documentación automática y testable.
+- **Seguridad**: [Passport.js](http://www.passportjs.org/) + [JWT](https://jwt.io/) - Autenticación robusta.
+- **Validación**: `class-validator` & `class-transformer` - Integridad de datos en DTOs.
 
 ---
 
-## 📚 Guías del Proyecto
+## 📚 Guías de Implementación
 
-| Guía | Tema | Documentación |
+Consulta la documentación detallada para cada módulo del sistema:
+
+| Módulo | Descripción | Documentación |
 | :--- | :--- | :--- |
-| **Guía 1** | Configuración Inicial de NestJS | [Resumen Guía 1](./docs/resumen-guia-1.md) |
-| **Guía 2** | CRUD Profesional con Prisma & Swagger | [Resumen Guía 2](./docs/resumen-guia-2.md) |
-| **Guía 3** | Autenticación JWT & Passport | [Resumen Guía 3](./docs/resumen-guia-3.md) |
-| **Guía 4** | CMS Headless con Strapi & Render | [Resumen Guía 4](./docs/resumen-guia-4.md) |
+| **01. Setup** | Configuración Inicial del Entorno | [📄 Ver Guía](./docs/resumen-guia-1.md) |
+| **02. API REST** | CRUD Profesional con Swagger | [📄 Ver Guía](./docs/resumen-guia-2.md) |
+| **03. Auth** | Autenticación Segura (JWT) | [📄 Ver Guía](./docs/resumen-guia-3.md) |
+| **04. CMS** | Headless CMS con Strapi | [📄 Ver Guía](./docs/resumen-guia-4.md) |
 
 ---
 
-## 🗄️ Navegación de Base de Datos
+## 🗄️ Base de Datos (Multi-DB)
 
-Este proyecto soporta **Multi-DB Architecture**. Puedes alternar entre motores sin cambiar el código.
+Este sistema implementa un patrón de **Repository** flexible, permitiendo cambiar el motor de base de datos sin alterar la lógica de negocio. Para detalles técnicos profundos, consulta la [**Documentación de Base de Datos**](./docs/DATABASE.md).
 
-### Configuración
-Consulta la [**Documentación de Base de Datos**](./docs/DATABASE.md) para detalles completos.
+### Comandos Clave
+*   `npm run db:docker:postgresql`: Levanta contenedor PostgreSQL (requiere `.env` configurado).
+*   `npm run seed`: Puebla la base de datos con usuarios y roles iniciales.
+*   `npx prisma studio`: Panel visual para gestión de datos.
 
-### Comandos de Infraestructura
-- `npm run db:docker:postgresql`: Levanta un contenedor de Postgres basado en tu `.env`.
-- `npm run seed`: Puebla la base de datos con roles y usuarios de prueba.
-- `npx prisma studio`: Abre la interfaz visual para explorar los datos.
+> [!IMPORTANT]
+> **Nota sobre SQLite:** El proyecto incluye `dev.db` preconfigurado para pruebas inmediatas. Para producción, cambia `DB_TYPE` a `postgresql` en tu `.env`.
 
 ---
 
-## 🚀 Inicio Rápido
+## 🚀 Instalación y Uso
 
-### 1. Instalación
+Sigue estos pasos para desplegar el proyecto localmente:
+
+### 1. Preparación
 ```bash
+# Instalar dependencias
 npm install
-```
 
-### 2. Configuración de Entorno
-Copia el archivo de ejemplo y ajusta las variables según tu necesidad:
-```bash
+# Configurar variables de entorno
 cp .env.example .env
 ```
-> [!NOTE]
-> Por defecto, el proyecto está configurado para usar **SQLite**. Si deseas usar **PostgreSQL**, cambia `DB_TYPE` a `postgresql` en tu `.env`.
-> 
-> **Nota para SQLite**: El archivo `dev.db` ya viene incluido en el repositorio con datos iniciales para facilitar tus pruebas rápidas.
 
-### 3. Preparación de Base de Datos
+### 2. Base de Datos
 ```bash
-# Sincronizar esquema y generar cliente Prisma
+# Generar cliente Prisma y sincronizar esquema
 npx prisma generate
 npx prisma db push
 
-# (Opcional) Si usas PostgreSQL con Docker
+# (Opcional) Levantar PostgreSQL si no usas SQLite
 npm run db:docker:postgresql
 
-# Poblar con datos de prueba
+# Cargar datos semilla
 npm run seed
 ```
 
-### 4. Ejecución
+### 3. Ejecución
 ```bash
-# Iniciar servidor en modo desarrollo
+# Modo desarrollo con Hot-Reload
 npm run start:dev
 ```
 
 ---
 
-### 🔗 Enlaces Útiles
-- **Documentación API (Swagger):** `http://localhost:3006/api` (Verificar PORT en `.env`)
-- **Arquitectura Flexible**: Reside en `src/core/database`.
+## 🔗 Recursos Adicionales
+
+- **Swagger UI:** `http://localhost:3006/api` (Verificar puerto en `.env`)
+- **Arquitectura**: Código fuente en `src/core/database`.
 
 ---
-© 2026 - Proyecto de Diseño de Sistemas
-
+<div align="center">
+  <sub>© 2026 - Proyecto de Diseño de Sistemas</sub>
+</div>
